@@ -10,20 +10,20 @@ const goblinListEl = document.querySelector('.goblins');
 let defeatedGoblinsCount = 0;
 let playerHP = 10;
 let goblins = [
-    { id: 1, name: 'Terry', hp: 1 },
-    { id: 2, name: 'Professor Goblin', hp: 4 },
+    { id: 1, name: 'Jasper', hp: 1 },
+    { id: 2, name: 'Peridot', hp: 4 },
 ];
 let currentId = 3;
 
-// - New goblin form
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    //   - User has supplied a name and submitted the form
+
     const data = new FormData(form);
 
     const goblinName = data.get('goblin-name');
 
-    //   - Make a new goblin object with that user input
+
 
     const newGoblin = {
         id: currentId,
@@ -32,7 +32,7 @@ form.addEventListener('submit', (e) => {
     };
     currentId++;
 
-    //   - Add that object to the array of goblins in state
+
     goblins.push(newGoblin);
 
     displayGoblins();
@@ -70,7 +70,7 @@ function goblinClickHandler(goblinData) {
     hpEl.textContent = goblinData.hp < 0 ? 0 : goblinData.hp;
 
     const faceEl = document.getElementById(`goblin-face-${goblinData.id}`);
-    faceEl.textContent = goblinData.hp > 0 ? '😈' : '🔥';
+    faceEl.textContent = goblinData.hp > 0 ? '👾' : '💀';
 }
 
 function displayGoblins() {
@@ -82,11 +82,7 @@ function displayGoblins() {
     for (let goblin of goblins) {
         //     - render a new goblin DOM element for each item
         const goblinEl = renderGoblin(goblin);
-        // - append that element to the HTML
 
-        // now that we have a goblin element, we can make each goblin clickable like so
-        // this is a DYNAMIC EVENT LISTENER. we make a new event listener for every goblin!
-        // an event listener is a property just like anything else. just like text content, just like style. we add it to elements.
         goblinEl.addEventListener('click', () => {
             goblinClickHandler(goblin);
         });

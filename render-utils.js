@@ -10,10 +10,8 @@ export function renderGoblin(goblinData) {
     hpEl.id = `goblin-hp-${goblinData.id}`;
     hpEl.textContent = goblinData.hp < 0 ? 0 : goblinData.hp;
 
-    // use a weird "ternary" to set the face
-    // if the goblin lives, do a imp emoji, else do a fire emoji
     faceEl.id = `goblin-face-${goblinData.id}`;
-    faceEl.textContent = goblinData.hp > 0 ? '😈' : '🔥';
+    faceEl.textContent = goblinData.hp > 0 ? '👾' : '💀';
 
     if (goblinData.hp < 0) {
         goblinEl.classList.add('dead');
