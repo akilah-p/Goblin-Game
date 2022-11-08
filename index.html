@@ -25,36 +25,36 @@
 </head>
 
 <body>
+
     <main>
-        <div class="crystalgem-stats">
-            <div class="defeated-hwgems">
-                <p>You have defeated <span id="defeated-number">0</span> Homeworld Gems</p>
+        <div class="adventurer-stats">
+            <div class="defeated-goblins">
+                <p>You have defeated <span id="defeated-number">0</span> goblins</p>
                 <div class="defeated-list"></div>
             </div>
-            <div class="Crystal Gem">
+            <div class="adventurer">
                 <p>
                     Your HP:
-                    <span id="crystalgem-hp">10</span>
+                    <span id="adventurer-hp">10</span>
                 </p>
-                <img id="crystalgem-img" src="#"
-                    alt="adventure with brown hair, a red shirt with yellow star and pants" />
+                <img id="adventurer-img" src="./assets/adventurer.png"
+                    alt="adventurer with blonde hair and a brown outfit" />
             </div>
         </div>
-        <div class="gem-stats">
+        <div class="goblin-stats">
             <div>
                 <form>
-                    <label for="gem-name-input"> New Gem: </label>
+                    <label for="goblin-name-input">New Goblin:</label>
                     <div id="div-form">
-                        <input name="gem-name" id="gem-name-input" type="text" />
-                        <button type="submit">Challenge Homeworld Gem</button>
+                        <input name="goblin-name" id="goblin-name-input" type="text" />
+                        <button type="submit">Challenge goblin</button>
                     </div>
                 </form>
-                <div class="homeworld-gems"></div>
+                <div class="goblins"></div>
             </div>
         </div>
-
     </main>
-
+    <script type="module" src="./app.js"></script>
 </body>
 
 </html>
