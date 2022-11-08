@@ -8,4 +8,16 @@ export function renderGem(gemData) {
 
     nameEl.textContent = gemData.name;
     hpEl.id = `gem-hp-${gemData.id}`;
+    hpEl.textContent = gemData.hp < 0 ? 0 : gemData.hp;
+
+    faceEl.id = `gem-face-${gemData.id}`;
+    faceEl.textContent = gemData.hp > 0 ? '👹' : '💥';
+
+    if (gemData.hp < 0) {
+        gemEl.classList.add('dead');
+    }
+
+    gemEl.append(nameEl, faceEl, hpEl);
+
+    return gemEl;
 }
