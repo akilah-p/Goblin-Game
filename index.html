@@ -25,12 +25,32 @@
 </head>
 
 <body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
     <main>
+        <div class="adventurer-stats">
+            <div class="defeated-gems">
+                <p>You have defeated <span id="defeated-number">0</span> Homeworld Gems</p>
+                <div class="defeated-list"></div>
+            </div>
+            <div class="Crystal Gem">
+                <p>
+                    Your HP:
+                    <span id="gem-hp">10</span>
+                </p>
+                <img id="gem-img" src="#" alt="adventure with brown hair, a red shirt with yellow star and pants" />
+            </div>
+        </div>
+        <div class="gem-stats">
+            <div>
+                <form>
+                    <label for="gem-name-input"> New Gem: </label>
+                    <div id="div-form">
+                        <input name="gem-name" id="gem-name-input" type="text" />
+                        <button type="submit">Challenge Homeworld Gem</button>
+                    </div>
+                </form>
+                <div class="homeworld-gems"></div>
+            </div>
+        </div>
 
     </main>
 
