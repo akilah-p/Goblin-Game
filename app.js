@@ -1,4 +1,4 @@
-// import functions and grab DOM elements
+
 import { renderGoblin } from './render-utils.js';
 const defeatedNumberEl = document.querySelector('#defeated-number');
 const adventurerHPEl = document.querySelector('#adventurer-hp');
@@ -6,7 +6,7 @@ const adventurerImgEl = document.querySelector('#adventurer-img');
 const form = document.querySelector('form');
 const goblinListEl = document.querySelector('.goblins');
 
-// let state
+
 let defeatedGoblinsCount = 0;
 let playerHP = 10;
 let goblins = [

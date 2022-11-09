@@ -1,27 +1,28 @@
-## The Golden Rule:
+Plan
+![](./assets/wireframe.jpg)
+HTML
+Slice 1 Adventurer
+div adventurer stats
+#p adveturer HP
+Adventurer img
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+Slice 2 Goblin Gems
+#input new gem
+#button challenge gem
+#button Gem (Jasper)
+#button Gem (Peridot)
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+Functionality
+render js
+Create functionality for Goblin Gem attack button.
 
-## Making a plan
+app js
+create functionality for player HP
+create clickhandler for goblingem.
+If player hp < 0 functionality stops
+if goblin hp < 0 functionality stops
 
-1. **Make a drawing of your app. Simple "wireframes"**
-1. **Look at the drawing and name the HTML elements you'll need to realize your vision**
-1. **Look at the drawing and imagine using the app. What _state_ do you need to track?**
-1. **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")**
-1. **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
-1. **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change? Does any DOM update?**
-1. **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
-1. **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+create form event listener
+generates new goblin gems when name is put into the input.
 
-Additional considerations:
-
--   Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
--   Consider your data model.
-    -   What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
-    -   What are the key/value pairs?
-    -   What arrays might you need?
-    -   What needs to live in a persistence layer?
--   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+displayGoblins function to display goblins after inputted.
