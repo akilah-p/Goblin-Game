@@ -1,8 +1,8 @@
 
 import { renderGoblin } from './render-utils.js';
 const defeatedNumberEl = document.querySelector('#defeated-number');
-const adventurerHPEl = document.querySelector('#adventurer-hp');
-const adventurerImgEl = document.querySelector('#adventurer-img');
+const gemHPEl = document.querySelector('#adventurer-hp');
+const gemImgEl = document.querySelector('#adventurer-img');
 const form = document.querySelector('form');
 const goblinListEl = document.querySelector('.goblins');
 
@@ -60,10 +60,10 @@ function goblinClickHandler(goblinData) {
     }
 
     if (playerHP === 0) {
-        adventurerImgEl.classList.add('game-over');
+        gemImgEl.classList.add('game-over');
         alert('GAME OVER!!');
     }
-    adventurerHPEl.textContent = playerHP;
+    gemHPEl.textContent = playerHP;
     defeatedNumberEl.textContent = defeatedGoblinsCount;
 
     const hpEl = document.getElementById(`goblin-hp-${goblinData.id}`);

@@ -3,14 +3,20 @@ Plan
 HTML
 Slice 1 Adventurer
 div adventurer stats
-#p adveturer HP
+
+# p adveturer HP
+
 Adventurer img
 
 Slice 2 Goblin Gems
-#input new gem
-#button challenge gem
-#button Gem (Jasper)
-#button Gem (Peridot)
+
+# input new gem
+
+# button challenge gem
+
+# button Gem (Jasper)
+
+# button Gem (Peridot)
 
 Functionality
 render js
