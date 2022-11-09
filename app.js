@@ -40,13 +40,14 @@ form.addEventListener('submit', (e) => {
 
 function goblinClickHandler(goblinData) {
     if (goblinData.hp <= 0) return;
+    if (playerHP <= 0) return;
     if (Math.random() < 0.33) {
         goblinData.hp--;
         alert('you hit ' + goblinData.name);
     } else {
         alert('you tried to hit ' + goblinData.name + ' but missed');
     }
-    //  - possibly decrement player HP
+
     if (Math.random() < 0.5) {
         playerHP--;
         alert(goblinData.name + ' hit you!');
@@ -60,9 +61,8 @@ function goblinClickHandler(goblinData) {
 
     if (playerHP === 0) {
         adventurerImgEl.classList.add('game-over');
-        alert('GAME OVER!!!');
+        alert('GAME OVER!!');
     }
-    //     - update the DOM with new goblin, player, and defeated goblin state.
     adventurerHPEl.textContent = playerHP;
     defeatedNumberEl.textContent = defeatedGoblinsCount;
 
@@ -74,13 +74,11 @@ function goblinClickHandler(goblinData) {
 }
 
 function displayGoblins() {
-    //   - "update a list"
-    //     - clear out the list DOM
+
     goblinListEl.textContent = '';
 
-    //     - loop through the goblins
+
     for (let goblin of goblins) {
-        //     - render a new goblin DOM element for each item
         const goblinEl = renderGoblin(goblin);
 
         goblinEl.addEventListener('click', () => {
